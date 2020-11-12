@@ -35,3 +35,7 @@ WHERE City = 'PUNE' OR State = 'MAHARASHTRA';
 #Size of AddressBook
 select * from addressbook
 where State='maharashtra' OR City='pune';
+#sorted Alphabetically
+select * from addressbook
+where city='pune'
+order by FirstName;
