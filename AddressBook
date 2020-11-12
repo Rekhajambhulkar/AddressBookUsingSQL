@@ -25,3 +25,8 @@ UPDATE AddressBook
 SET City = 'NAGPUR'
 WHERE FirstName = 'RIYA';
 SELECT * FROM AddressBook;
+#Delete contacts
+DELETE FROM AddressBook
+WHERE FirstName = 'RIYA';
+SELECT * FROM AddressBook;
+
