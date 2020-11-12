@@ -1,7 +1,9 @@
+#print the welcome message
 "Welcome to AddressBook system"
-
+#create a database
 CREATE DATABASE AddressBookService;
 USE AddressBookservice;
+#create a table
 CREATE TABLE AddressBook(
 	FirstName varchar(200) NOT NULL PRIMARY KEY,
 	LastName varchar(200) NOT NULL,
@@ -12,3 +14,10 @@ CREATE TABLE AddressBook(
 	PhoneNumber bigint(10) NOT NULL,
 	EmailId varchar(255) NOT NULL
 );
+#Insert a contacts
+INSERT INTO AddressBook(FirstName,LastName,Address,City,State,Zip,PhoneNumber,EmailId)
+VALUES('REKHA','JAMBHULKAR','TALEGAON','PUNE','MAHARASHTRA',411023,9139124143,'jambhulkarrekha@gmail.com'),
+('RIYA','SAHANI',''NERUL','MUMBAI','MAHARASHTRA',182324,7774567789,'riya12j@gmail.com'),
+('RAHUL','KAPR','ABC','PUNE','MAHARASHTRA',235647,9822626490,'rahulkapr@gmail.com'),
+('SHWETA','SANE','LMN','NASHIK','MAHARASHTRA',563412,9867543212,'shwetasane@gmail.com');
+
