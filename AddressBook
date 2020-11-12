@@ -32,4 +32,6 @@ SELECT * FROM AddressBook;
 #Retrieve a Person
 SELECT * FROM AddressBook
 WHERE City = 'PUNE' OR State = 'MAHARASHTRA';
-
+#Size of AddressBook
+select * from addressbook
+where State='maharashtra' OR City='pune';
