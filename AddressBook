@@ -20,4 +20,8 @@ VALUES('REKHA','JAMBHULKAR','TALEGAON','PUNE','MAHARASHTRA',411023,9139124143,'j
 ('RIYA','SAHANI',''NERUL','MUMBAI','MAHARASHTRA',182324,7774567789,'riya12j@gmail.com'),
 ('RAHUL','KAPR','ABC','PUNE','MAHARASHTRA',235647,9822626490,'rahulkapr@gmail.com'),
 ('SHWETA','SANE','LMN','NASHIK','MAHARASHTRA',563412,9867543212,'shwetasane@gmail.com');
-
+#Update contacts with thier name 
+UPDATE AddressBook
+SET City = 'NAGPUR'
+WHERE FirstName = 'RIYA';
+SELECT * FROM AddressBook;
