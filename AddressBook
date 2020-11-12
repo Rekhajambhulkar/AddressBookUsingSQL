@@ -1,3 +1,14 @@
 "Welcome to AddressBook system"
 
 CREATE DATABASE AddressBookService;
+USE AddressBookservice;
+CREATE TABLE AddressBook(
+	FirstName varchar(200) NOT NULL PRIMARY KEY,
+	LastName varchar(200) NOT NULL,
+	Address varchar(200) NOT NULL,
+	City varchar(200) NOT NULL,
+	State varchar(200) NOT NULL,
+	Zip int(10) NOT NULL,
+	PhoneNumber bigint(10) NOT NULL,
+	EmailId varchar(255) NOT NULL
+);
