@@ -29,4 +29,7 @@ SELECT * FROM AddressBook;
 DELETE FROM AddressBook
 WHERE FirstName = 'RIYA';
 SELECT * FROM AddressBook;
+#Retrieve a Person
+SELECT * FROM AddressBook
+WHERE City = 'PUNE' OR State = 'MAHARASHTRA';
 
