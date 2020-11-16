@@ -1,8 +1,10 @@
 #print the welcome message
 "Welcome to AddressBook system"
+
 #create a database
 CREATE DATABASE AddressBookService;
 USE AddressBookservice;
+
 #create a table
 CREATE TABLE AddressBook(
 	FirstName varchar(200) NOT NULL PRIMARY KEY,
@@ -14,28 +16,57 @@ CREATE TABLE AddressBook(
 	PhoneNumber bigint(10) NOT NULL,
 	EmailId varchar(255) NOT NULL
 );
+
 #Insert a contacts
 INSERT INTO AddressBook(FirstName,LastName,Address,City,State,Zip,PhoneNumber,EmailId)
 VALUES('REKHA','JAMBHULKAR','TALEGAON','PUNE','MAHARASHTRA',411023,9139124143,'jambhulkarrekha@gmail.com'),
 ('RIYA','SAHANI',''NERUL','MUMBAI','MAHARASHTRA',182324,7774567789,'riya12j@gmail.com'),
 ('RAHUL','KAPR','ABC','PUNE','MAHARASHTRA',235647,9822626490,'rahulkapr@gmail.com'),
 ('SHWETA','SANE','LMN','NASHIK','MAHARASHTRA',563412,9867543212,'shwetasane@gmail.com');
+
 #Update contacts with thier name 
 UPDATE AddressBook
 SET City = 'NAGPUR'
 WHERE FirstName = 'RIYA';
 SELECT * FROM AddressBook;
+
 #Delete contacts
 DELETE FROM AddressBook
 WHERE FirstName = 'RIYA';
 SELECT * FROM AddressBook;
+
 #Retrieve a Person
 SELECT * FROM AddressBook
 WHERE City = 'PUNE' OR State = 'MAHARASHTRA';
+
 #Size of AddressBook
 select * from addressbook
 where State='maharashtra' OR City='pune';
+
 #sorted Alphabetically
 select * from addressbook
 where city='pune'
 order by FirstName;
+
+#identify AddressBook
+ALTER TABLE AddressBook
+ADD addressBookType varchar(100) NOT NULL;
+UPDATE AddressBook
+SET addressBookType=CASE FirstName
+WHEN 'Prakash' THEN 'Friend'
+WHEN 'Simran' THEN 'Profession'
+WHEN 'Soney' THEN 'Family'
+ELSE addressBookType
+END;
+select * from AddressBook;
+
+#CREATE TABLE ADDRESSBOOKTYPE
+CREATE TABLE ADDRESSBOOKTYPE(ID INT PRIMARY KEY,FIRSTNAME VARCHAR(100) NOT NULL,LASTNAME VARCHAR(100) NOT NULL,EMAILID VARCHAR(200) NOT NULL,FOREIGN KEY(EMAILID) REFERENCES ADDRESSBOOK(EMAILID));
+
+#INSERT CONTACTS IN ADDRESSBOOKTYPE TABLE
+INSERT INTO AddressbookTYPE(ID,FIRSTNAME,LASTNAME,EMAILID,ADDRESSBOOKTYPE)
+VALUES(1,'AARAV','CHANDGUDE','ganesh.karn@gmail.com','FRIEND'),
+(2,'REKHA','JAMBHULKAR','jambhulkarrekha@gmail.com','PROFESSION'),
+(3,'GANESH','PAWAR','jambhulkarrekha1@gmail.com','FAMILY'),
+(4,'RIYA','SANE','riya122@gmail.com','FRIEND');
+
