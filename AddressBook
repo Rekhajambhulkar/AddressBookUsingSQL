@@ -70,3 +70,7 @@ VALUES(1,'AARAV','CHANDGUDE','ganesh.karn@gmail.com','FRIEND'),
 (3,'GANESH','PAWAR','jambhulkarrekha1@gmail.com','FAMILY'),
 (4,'RIYA','SANE','riya122@gmail.com','FRIEND');
 
+#COUNT BY TYPE
+SELECT COUNT(ADDRESSBOOKTYPE) FROM ADDRESSBOOKTYPE;
+
+
